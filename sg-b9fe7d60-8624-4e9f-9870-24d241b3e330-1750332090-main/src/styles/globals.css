@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* white */
+    --foreground: 0 0% 0%; /* black */
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 0 0% 0%; /* black */
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 0 0% 0%; /* black */
+    --primary: 0 0% 0%; /* black */
+    --primary-foreground: 0 0% 100%; /* white */
+    --secondary: 0 0% 96.1%; /* light gray */
+    --secondary-foreground: 0 0% 9%; /* dark gray */
+    --muted: 0 0% 96.1%; /* light gray */
+    --muted-foreground: 0 0% 45.1%; /* medium gray */
+    --accent: 0 0% 96.1%; /* light gray */
+    --accent-foreground: 0 0% 9%; /* dark gray */
+    --destructive: 0 84.2% 60.2%; /* red */
+    --destructive-foreground: 0 0% 98%; /* light gray / white */
+    --border: 0 0% 89.8%; /* light gray */
+    --input: 0 0% 89.8%; /* light gray */
+    --ring: 0 0% 0%; /* black */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 0%; /* black */
+    --foreground: 0 0% 100%; /* white */
+    --card: 0 0% 0%; /* black */
+    --card-foreground: 0 0% 100%; /* white */
+    --popover: 0 0% 0%; /* black */
+    --popover-foreground: 0 0% 100%; /* white */
+    --primary: 0 0% 100%; /* white */
+    --primary-foreground: 0 0% 0%; /* black */
+    --secondary: 0 0% 14.9%; /* dark gray */
+    --secondary-foreground: 0 0% 98%; /* light gray / white */
+    --muted: 0 0% 14.9%; /* dark gray */
+    --muted-foreground: 0 0% 63.9%; /* medium gray */
+    --accent: 0 0% 14.9%; /* dark gray */
+    --accent-foreground: 0 0% 98%; /* light gray / white */
+    --destructive: 0 72.2% 50.6%; /* red */
+    --destructive-foreground: 0 0% 98%; /* light gray / white */
+    --border: 0 0% 14.9%; /* dark gray */
+    --input: 0 0% 14.9%; /* dark gray */
+    --ring: 0 0% 100%; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}
